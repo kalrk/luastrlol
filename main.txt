@@ -7,3 +7,19 @@ end
 local str = setmetatable({"tmp_str"},table)
 print(str[1.1])--[w > 1].1
 --lol
+
+--inside lua ( print = nil), it's complicated
+
+
+
+
+--my own pcall?
+
+function icall(msg,func, ...)
+  local _, err = load(func)
+  if not _ then
+    return msg
+  end
+  func(...)
+  return "success"
+end
