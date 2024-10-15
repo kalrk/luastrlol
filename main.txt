@@ -1,0 +1,9 @@
+local table = {__index = function(_,w)
+  w = math.floor(w)
+  return string.sub(_[1], w,w)
+end
+}
+
+local str = setmetatable({"tmp_str"},table)
+print(str[1.1])--[w > 1].1
+--lol
