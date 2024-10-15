@@ -12,8 +12,11 @@ print(str[1.1])--[w > 1].1
 
 
 
-
 --my own pcall?
+
+
+--An alternative in some cases is to read a compressed bytecode file for lua (a java lore file), etc.
+--this is not associated with the scope
 
 function icall(msg,func, ...)
   local _, err = load(func)
